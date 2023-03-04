@@ -1,12 +1,17 @@
-#include<stdio.h>
-int main(){
+#include <stdio.h>
+
+int main() {
     int a;
-    printf("enter serial no. of year to chq\n");
-    scanf("%d",&a);
-    if(a%4==0){
-        printf("This is a leap year");
+    scanf("%d", &a);
+
+    for (int i = 1; i <= a; i++) {
+        if (i % 400 == 0) {
+            printf("%d ", i);
+        }
+        else if (i % 4 == 0 && i % 100 != 0) {
+            printf("%d ", i);
+        }
     }
-    else{
-        printf("This is not a leap year");
-    }
+
+    return 0;
 }
